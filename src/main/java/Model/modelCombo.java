@@ -7,6 +7,7 @@ package Model;
 import Factory.Combo;
 import Factory.Factory.ComboFactory;
 import Factory.Factory.HamburguesaFactory;
+import Factory.Factory.InfantilFactory;
 import Factory.Factory.PolloFactory;
 import Factory.Factory.VegetarianaFactory;
 
@@ -32,6 +33,10 @@ public class modelCombo {
             }
             case "vegetariana" -> {
                 return new VegetarianaFactory();
+            }
+            
+            case "infantil" -> {
+                return new InfantilFactory();
             }
             default -> throw new IllegalArgumentException("Tipo no válido");
         }

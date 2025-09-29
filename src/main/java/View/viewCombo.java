@@ -40,7 +40,7 @@ public class viewCombo extends JPanel {
         add(texto2);
         
         //Eleccion
-        eleccion = new JComboBox<>(new String[]{"Hamburguesa", "Pollo", "Vegetariana"});
+        eleccion = new JComboBox<>(new String[]{"Hamburguesa", "Pollo", "Vegetariana", "Infantil"});
         eleccion.setBounds(280, 95, 150, 30);
         add(eleccion);
         
