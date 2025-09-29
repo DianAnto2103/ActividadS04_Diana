@@ -1,5 +1,6 @@
 package Control;
 
+import Factory.Combo;
 import View.viewResumen;
 import View.viewHome;
 import Model.modelResumen;
@@ -12,8 +13,10 @@ import Model.modelResumen;
 public class controlResumen {
     private modelResumen modelo;
     private viewResumen vista;
+    private viewHome vista_g;
 
     public controlResumen(viewHome vista_g, modelResumen modelo) {
+        this.modelo = modelo;
         this.modelo = modelo;
         this.vista = vista_g.getViewResumen();
 
@@ -25,8 +28,10 @@ public class controlResumen {
     }
 
     // Método para actualizar la vista con los datos del modelo
-    public void mostrarResumen() {
-            vista.getValorCombo().setText(modelo.getCombo().crearComboconTipo(tipo)));
+    public void mostrarResumen() { 
+        
+            Combo combo = modelo.getCombo().getCombo();
+            vista.getValorCombo().setText(combo.getNombre() + " - S/" + combo.getPrecio());
             vista.getValorBebida().setText(modelo.getPersonalizar().getBebida());
             vista.getValorAcompa().setText(modelo.getPersonalizar().getAcompa());
             vista.getValorExtra().setText(modelo.getPersonalizar().getExtra());

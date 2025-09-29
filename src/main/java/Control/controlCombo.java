@@ -27,11 +27,8 @@ public class controlCombo {
         //Listener
         vista.getAceptar().addActionListener(e -> 
         {
-            //Conseguir el tipo seleccionado
-            String tipoSeleccionado = vista.getEleccion();
-            
             //Guardar lo que selecciono el usuario
-            modelo.crearComboconTipo(tipoSeleccionado);
+            modelo.crearComboconTipo(vista.getEleccion());
             
             //Pasar a la pantalla siguiente
             vista_g.showScreen("personalizar");
