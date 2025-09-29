@@ -4,7 +4,7 @@
  */
 package Principal;
 
-import View.viewHome;
+import Control.controlCombo;
 
 /**
  *
@@ -13,6 +13,7 @@ import View.viewHome;
 public class Main {
     public static void main(String[] args) 
     {
-        new viewHome();
+        controlCombo combo = new controlCombo();
+        combo.run();
     }
 }

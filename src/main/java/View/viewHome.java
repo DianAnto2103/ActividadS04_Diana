@@ -12,6 +12,8 @@ import View.viewCombo;
  * @author diana
  */
 public class viewHome extends JFrame{
+    private viewCombo combo;
+    
     public viewHome(){
         setTitle("Programa");
         setSize(490,300);
@@ -20,8 +22,18 @@ public class viewHome extends JFrame{
         this.setResizable(false);
         
         //Panel inicial
-        setContentPane(new viewCombo());
-        setVisible(true);
+        combo = new viewCombo();
+        setContentPane(combo);
+    }
+    
+    public viewCombo getViewCombo()
+    {
+        return combo;
+    }
+    
+    public void run()
+    {
+        this.setVisible(true);
     }
     
 
