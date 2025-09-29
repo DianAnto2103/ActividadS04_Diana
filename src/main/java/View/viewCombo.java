@@ -56,4 +56,16 @@ public class viewCombo extends JPanel {
         
     }
     
+    public JComboBox<String> getEleccion() {
+        return eleccion;
+    }
+
+    public JButton getAceptar() {
+        return aceptar;
+    }
+
+    public JButton getCancelar() {
+        return cancelar;
+    }
+    
 }

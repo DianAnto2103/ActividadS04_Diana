@@ -52,16 +52,16 @@ public class viewPersonalizar extends JPanel {
         
         //Elecciones
         
-        eleccionBebida = new JComboBox<>(new String[]{"CocaCola", "IncaKola", "Sprite"});
+        eleccionBebida = new JComboBox<>(new String[]{"CocaCola", "IncaKola", "Sprite", "NO"});
         eleccionBebida.setBounds(210, 60, 150, 25);
         add(eleccionBebida);
         
-        eleccionAcompa = new JComboBox<>(new String[]{"Papas", "Puré"});
+        eleccionAcompa = new JComboBox<>(new String[]{"Papas", "Puré", "NO"});
         eleccionAcompa.setBounds(210, 100, 150, 25);
         add(eleccionAcompa);
         
         
-        eleccionExtra = new JComboBox<>(new String[]{"Helado", "Caramelo"});
+        eleccionExtra = new JComboBox<>(new String[]{"Helado", "Palomitas", "Cajita Feliz", "NO"});
         eleccionExtra.setBounds(210, 140, 150, 25);
         add(eleccionExtra);
         
@@ -75,6 +75,26 @@ public class viewPersonalizar extends JPanel {
         regresar.setBounds(260, 200, 100, 30);
         add(regresar);
         
+    }
+    
+    public JComboBox getEleccionBebida() {
+        return eleccionBebida;
+    }
+
+    public JComboBox getEleccionAcompa() {
+        return eleccionAcompa;
+    }
+
+    public JComboBox getEleccionExtra() {
+        return eleccionExtra;
+    }
+
+    public JButton getAceptar() {
+        return aceptar;
+    }
+
+    public JButton getRegresar() {
+        return regresar;
     }
     
 }
