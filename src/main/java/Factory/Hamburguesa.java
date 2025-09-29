@@ -12,12 +12,7 @@ public class Hamburguesa implements Combo{
 
     @Override
     public String nombre() {
-        return "Combo Hamburguesa";
-    }
-
-    @Override
-    public String descripcion() {
-        return "Deliciosa combo hamburguesa rellena de queso.";
+        return "Hamburguesa";
     }
 
     @Override

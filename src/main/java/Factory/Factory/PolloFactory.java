@@ -2,20 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Factory;
+package Factory.Factory;
+
+import Factory.Combo;
+import Factory.Pollo;
 
 /**
  *
  * @author diana
  */
-public class Vegetariana implements Combo{
+public class PolloFactory extends ComboFactory{
+    
     @Override
-    public String nombre() {
-        return "Vegetariano";
+    public Combo crearCombo(){
+        return new Pollo();
     }
-
-    @Override
-    public double precio() {
-        return 20.5;
-    }    
+    
 }

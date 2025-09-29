@@ -10,7 +10,5 @@ package Factory;
  */
 public interface Combo {
     public String nombre();
-    public String descripcion();
-    public String ingredientes();
     public double precio();
 }

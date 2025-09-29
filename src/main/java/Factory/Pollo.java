@@ -11,12 +11,7 @@ package Factory;
 public class Pollo implements Combo{
     @Override
     public String nombre() {
-        return "Combo de Pollo";
-    }
-
-    @Override
-    public String descripcion() {
-        return "Delicioso combo de pollo caliente.";
+        return "Pollo";
     }
 
     @Override
