@@ -26,7 +26,7 @@ public class controlResumen {
 
     // Método para actualizar la vista con los datos del modelo
     public void mostrarResumen() {
-            vista.getValorCombo().setText(modelo.getCombo().getCombo());
+            vista.getValorCombo().setText(modelo.getCombo().crearComboconTipo(tipo)));
             vista.getValorBebida().setText(modelo.getPersonalizar().getBebida());
             vista.getValorAcompa().setText(modelo.getPersonalizar().getAcompa());
             vista.getValorExtra().setText(modelo.getPersonalizar().getExtra());

@@ -4,18 +4,40 @@
  */
 package Model;
 
+import Factory.Combo;
+import Factory.Factory.ComboFactory;
+import Factory.Factory.HamburguesaFactory;
+import Factory.Factory.PolloFactory;
+import Factory.Factory.VegetarianaFactory;
+
 /**
  *
  * @author diana
  */
 public class modelCombo {
-    private String combo;
+    private Combo combo;
     
-    public void setCombo(String combo){
-        this.combo = combo;
+    public void crearComboconTipo(String tipo) {
+        ComboFactory factory = obtenerFactory(tipo);
+        this.combo = factory.crearCombo();
+    }
+ 
+    private ComboFactory obtenerFactory(String tipo) {
+        switch(tipo.toLowerCase()) {
+            case "hamburguesa" -> {
+                return new HamburguesaFactory();
+            }
+            case "pollo" -> {
+                return new PolloFactory();
+            }
+            case "vegetariana" -> {
+                return new VegetarianaFactory();
+            }
+            default -> throw new IllegalArgumentException("Tipo no válido");
+        }
     }
     
-    public String getCombo(){
+    public Combo getCombo(){
         return combo;
     }
 }
