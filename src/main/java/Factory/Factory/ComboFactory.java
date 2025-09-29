@@ -14,10 +14,10 @@ public abstract class ComboFactory {
     
     public abstract Combo crearCombo();
     
-    public String obtenerInformacionCombo()
+    public void obtenerInformacionCombo()
     {
         Combo combo = crearCombo();
-        
-        return combo.nombre() + combo.precio();
+        combo.getNombre();
+        combo.getPrecio();
     }
 }

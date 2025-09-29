@@ -10,12 +10,12 @@ package Factory;
  */
 public class Vegetariana implements Combo{
     @Override
-    public String nombre() {
+    public String getNombre() {
         return "Vegetariano";
     }
 
     @Override
-    public double precio() {
+    public double getPrecio() {
         return 20.5;
     }    
 }

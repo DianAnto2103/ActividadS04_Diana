@@ -9,6 +9,6 @@ package Factory;
  * @author diana
  */
 public interface Combo {
-    public String nombre();
-    public double precio();
+    public String getNombre();
+    public double getPrecio();
 }

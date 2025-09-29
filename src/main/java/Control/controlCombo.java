@@ -9,6 +9,7 @@ package Control;
  * @author diana
  */
 
+import Factory.Factory.ComboFactory;
 import Model.modelCombo;
 import View.viewCombo;
 import View.viewHome;
@@ -22,8 +23,16 @@ public class controlCombo {
         this.vista = vista_g.getViewCombo();
         
         
+        //Listener
         vista.getAceptar().addActionListener(e -> 
         {
+            //Conseguir el tipo seleccionado
+            String tipoSeleccionado = vista.getEleccion();
+            //
+            ComboFactory factory = crearCombo()
+            
+            
+            
             //Guardar lo que selecciono el usuario
             modelo.setCombo(vista.getEleccion());
             

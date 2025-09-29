@@ -11,12 +11,12 @@ package Factory;
 public class Hamburguesa implements Combo{
 
     @Override
-    public String nombre() {
+    public String getNombre() {
         return "Hamburguesa";
     }
 
     @Override
-    public double precio() {
+    public double getPrecio() {
         return 25.50;
     }
     
