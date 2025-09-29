@@ -5,9 +5,7 @@
 package View;
 
 import javax.swing.*;
-import View.viewCombo;
 import View.viewPersonalizar;
-import View.viewResumen;
 import java.awt.CardLayout;
 
 /**

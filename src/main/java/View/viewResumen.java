@@ -16,6 +16,7 @@ import javax.swing.*;
 
 
 public class viewResumen extends JPanel{
+
     public JLabel valorCombo;
     public JLabel valorBebida;
     public JLabel valorAcompa;
@@ -96,22 +97,22 @@ public class viewResumen extends JPanel{
         add(regresar);  
     }
     
-    public void setValorCombo(JLabel valorCombo) {
-        this.valorCombo = valorCombo;
+    public JLabel getValorCombo() {
+        return valorCombo;
     }
 
-    public void setValorBebida(JLabel valorBebida) {
-        this.valorBebida = valorBebida;
+    public JLabel getValorBebida() {
+        return valorBebida;
     }
 
-    public void setValorAcompa(JLabel valorAcompa) {
-        this.valorAcompa = valorAcompa;
+    public JLabel getValorAcompa() {
+        return valorAcompa;
     }
 
-    public void setValorExtra(JLabel valorExtra) {
-        this.valorExtra = valorExtra;
+    public JLabel getValorExtra() {
+        return valorExtra;
     }
-    
+      
     public JButton getAceptar() {
         return aceptar;
     }

@@ -15,21 +15,17 @@ import View.viewHome;
 
 
 public class controlCombo {
-    private modelCombo modelo;
     private viewCombo vista;
-    private viewHome vista_g;
     
-    public controlCombo(viewHome vista_g)
+    public controlCombo(viewHome vista_g, modelCombo modelo)
     {
-        this.vista_g = vista_g;
-        modelo = new modelCombo();
-        vista = vista_g.getViewCombo();
+        this.vista = vista_g.getViewCombo();
         
         
         vista.getAceptar().addActionListener(e -> 
         {
             //Guardar lo que selecciono el usuario
-            modelo.setCombo((String) vista.getEleccion());
+            modelo.setCombo(vista.getEleccion());
             
            //Pasar a la pantalla siguiente
            vista_g.showScreen("personalizar");
@@ -39,9 +35,5 @@ public class controlCombo {
 
     }
     
-    public void run(){
-        vista_g.run();
-    }
-    
-    
+  
 }

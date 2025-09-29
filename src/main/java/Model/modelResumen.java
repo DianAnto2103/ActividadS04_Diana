@@ -17,18 +17,6 @@ public class modelResumen {
         this.personalizar = personalizar;
     }
     
-    
-    //Colocar valor dentro de resumen -> Guardamos 
-    public void setPersonalizar(modelPersonalizar personalizar) {
-        this.personalizar = personalizar;
-    }
-
-    public void setCombo(modelCombo combo) {
-        this.combo = combo;
-    }
-
-    //Dar valor, es decir, entregar valores -> Entregamos
-    
     public modelCombo getCombo() {
         return combo;
     }

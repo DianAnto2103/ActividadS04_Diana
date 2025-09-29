@@ -4,7 +4,7 @@
  */
 package Principal;
 
-import Control.homeController;
+import Control.controlHome;
 
 /**
  *
@@ -13,7 +13,7 @@ import Control.homeController;
 public class Main {
     public static void main(String[] args) 
     {
-        homeController controller = new homeController();
+        controlHome controller = new controlHome();
         controller.run();
     }
 }
