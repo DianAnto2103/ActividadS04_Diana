@@ -12,20 +12,18 @@ package Control;
 import Model.modelCombo;
 import View.viewCombo;
 import View.viewHome;
-import View.viewPersonalizar;
+
 
 public class controlCombo {
     private modelCombo modelo;
     private viewCombo vista;
     private viewHome vista_g;
-    private viewPersonalizar panel_p;
     
-    public controlCombo()
+    public controlCombo(viewHome vista_g)
     {
+        this.vista_g = vista_g;
         modelo = new modelCombo();
-        vista_g = new viewHome();
         vista = vista_g.getViewCombo();
-        panel_p = new viewPersonalizar();
         
         
         vista.getAceptar().addActionListener(e -> 
@@ -33,16 +31,12 @@ public class controlCombo {
             //Guardar lo que selecciono el usuario
             modelo.setCombo((String) vista.getEleccion());
             
-            //Pasar a la pantalla siguiente
-            
-           vista_g.getContentPane().removeAll();
-           vista_g.setContentPane(panel_p);
-           vista_g.revalidate();
-           vista_g.repaint();
-           
+           //Pasar a la pantalla siguiente
+           vista_g.showScreen("personalizar");
         });
         
-       
+        vista.getCancelar().addActionListener(e -> System.exit(0));
+
     }
     
     public void run(){

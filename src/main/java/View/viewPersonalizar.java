@@ -77,16 +77,16 @@ public class viewPersonalizar extends JPanel {
         
     }
     
-    public JComboBox getEleccionBebida() {
-        return eleccionBebida;
+    public String getEleccionBebida() {
+        return (String) eleccionBebida.getSelectedItem();
     }
 
-    public JComboBox getEleccionAcompa() {
-        return eleccionAcompa;
+    public String getEleccionAcompa() {
+        return (String) eleccionAcompa.getSelectedItem();
     }
 
-    public JComboBox getEleccionExtra() {
-        return eleccionExtra;
+    public String getEleccionExtra() {
+        return (String) eleccionExtra.getSelectedItem();
     }
 
     public JButton getAceptar() {
