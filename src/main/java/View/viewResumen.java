@@ -8,6 +8,13 @@ package View;
  *
  * @author diana
  */
+
+
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.*;
+
+
 public class viewResumen {
     
 }
