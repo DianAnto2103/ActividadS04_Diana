@@ -13,16 +13,10 @@ public class modelPersonalizar {
     private String acompa;
     private String extra;
     
-    //setters -> Para guardar los datos
-    public void setBebida(String bebida) {
+    public modelPersonalizar(String bebida, String acompa, String extra)
+    {
         this.bebida = bebida;
-    }
-
-    public void setAcompa(String acompa) {
         this.acompa = acompa;
-    }
-
-    public void setExtra(String extra) {
         this.extra = extra;
     }
     

@@ -30,7 +30,7 @@ public class controlHome {
         vista_g = new viewHome();
 
         modeloCombo = new modelCombo();
-        modeloPersonalizar = new modelPersonalizar();
+        modeloPersonalizar = new modelPersonalizar("NO","NO","NO");
         modeloResumen = new modelResumen(modeloCombo, modeloPersonalizar);
         
         controlCombo = new controlCombo(vista_g, modeloCombo);     

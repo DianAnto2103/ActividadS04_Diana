@@ -1,6 +1,7 @@
 package Control;
 
 import Factory.Combo;
+import Model.modelPersonalizar;
 import View.viewResumen;
 import View.viewHome;
 import Model.modelResumen;
@@ -26,6 +27,10 @@ public class controlResumen {
         // Listener para Regresar
         vista.getRegresar().addActionListener(e -> vista_g.showScreen("personalizar"));
     }
+    
+     public void actualizarModelo(modelPersonalizar nuevoModelo){
+         this.modelo = new modelResumen(modelo.getCombo(), nuevoModelo);
+     }
 
     // Método para actualizar la vista con los datos del modelo
     public void mostrarResumen() { 

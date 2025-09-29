@@ -24,18 +24,18 @@ public class modelCombo {
     }
  
     private ComboFactory obtenerFactory(String tipo) {
-        switch(tipo.toLowerCase()) {
-            case "hamburguesa" -> {
+        switch(tipo) {
+            case "Hamburguesa" -> {
                 return new HamburguesaFactory();
             }
-            case "pollo" -> {
+            case "Pollo" -> {
                 return new PolloFactory();
             }
-            case "vegetariana" -> {
+            case "Vegetariana" -> {
                 return new VegetarianaFactory();
             }
             
-            case "infantil" -> {
+            case "Infantil" -> {
                 return new InfantilFactory();
             }
             default -> throw new IllegalArgumentException("Tipo no válido");

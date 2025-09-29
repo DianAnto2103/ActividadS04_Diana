@@ -16,21 +16,27 @@ import View.viewHome;
 
 public class controlPersonalizar {
     private viewPersonalizar vista;
+    private modelPersonalizar modelo;
+    private controlResumen controlResumen;
+    private viewHome vista_g;
+
     
     public controlPersonalizar(viewHome vista_g, modelPersonalizar modelo, controlResumen controlResumen)
     {
+        this.vista_g = vista_g;
+        this.modelo = modelo;
+        this.controlResumen = controlResumen;
         this.vista = vista_g.getViewPersonalizar();
+        
         
         vista.getAceptar().addActionListener(e -> 
         {
-            //Guardar seleccion realizada
-            
-            modelo.setBebida( vista.getEleccionBebida());
-            modelo.setAcompa(vista.getEleccionAcompa());
-            modelo.setExtra(vista.getEleccionExtra());
-            
-            
+            //Guardar seleccion realizada   
+            this.modelo = new modelPersonalizar(vista.getEleccionBebida(), vista.getEleccionAcompa(), vista.getEleccionExtra());
+                        
             // Actualizar el resumen ANTES de mostrar la pantalla
+            controlResumen.actualizarModelo(this.modelo);
+             
             controlResumen.mostrarResumen();
             
             //Pasar a la siguiente pantalla
