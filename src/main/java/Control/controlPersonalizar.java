@@ -9,6 +9,7 @@ package Control;
  * @author diana
  */
 
+import Builder.PersonalizacionBuilder;
 import Model.modelPersonalizar;
 import View.viewPersonalizar;
 import View.viewHome;
@@ -32,11 +33,15 @@ public class controlPersonalizar {
         vista.getAceptar().addActionListener(e -> 
         {
             //Guardar seleccion realizada   
-            this.modelo = new modelPersonalizar(vista.getEleccionBebida(), vista.getEleccionAcompa(), vista.getEleccionExtra());
-                        
+            this.modelo = new PersonalizacionBuilder()
+                .conBebida(vista.getEleccionBebida())
+                .conAcompa(vista.getEleccionAcompa()) 
+                .conExtra(vista.getEleccionExtra())
+                .construir();
+                
+            
             // Actualizar el resumen ANTES de mostrar la pantalla
             controlResumen.actualizarModelo(this.modelo);
-             
             controlResumen.mostrarResumen();
             
             //Pasar a la siguiente pantalla

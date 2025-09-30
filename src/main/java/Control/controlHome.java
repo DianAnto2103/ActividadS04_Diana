@@ -4,6 +4,7 @@
  */
 package Control;
 
+import Builder.PersonalizacionBuilder;
 import Model.modelCombo;
 import Model.modelPersonalizar;
 import Model.modelResumen;
@@ -28,11 +29,12 @@ public class controlHome {
         
         // Crear la vista principal
         vista_g = new viewHome();
-
         modeloCombo = new modelCombo();
-        modeloPersonalizar = new modelPersonalizar("NO","NO","NO");
-        modeloResumen = new modelResumen(modeloCombo, modeloPersonalizar);
         
+        //Builder
+        modeloPersonalizar = new PersonalizacionBuilder().construir();
+        
+        modeloResumen = new modelResumen(modeloCombo, modeloPersonalizar);
         controlCombo = new controlCombo(vista_g, modeloCombo);     
         controlResumen = new controlResumen(vista_g, modeloResumen);
         controlPersonalizar = new controlPersonalizar(vista_g, modeloPersonalizar, controlResumen);
