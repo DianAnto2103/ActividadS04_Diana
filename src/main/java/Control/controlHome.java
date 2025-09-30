@@ -21,7 +21,6 @@ public class controlHome {
     private modelPersonalizar modeloPersonalizar;
     private modelResumen modeloResumen;
 
-    private controlCombo controlCombo;
     private controlPersonalizar controlPersonalizar;
     private controlResumen controlResumen;
     
@@ -35,7 +34,7 @@ public class controlHome {
         modeloPersonalizar = new PersonalizacionBuilder().construir();
         
         modeloResumen = new modelResumen(modeloCombo, modeloPersonalizar);
-        controlCombo = new controlCombo(vista_g, modeloCombo);     
+        new controlCombo(vista_g, modeloCombo);     
         controlResumen = new controlResumen(vista_g, modeloResumen);
         controlPersonalizar = new controlPersonalizar(vista_g, modeloPersonalizar, controlResumen);
     }

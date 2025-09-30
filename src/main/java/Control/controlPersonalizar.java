@@ -18,15 +18,11 @@ import View.viewHome;
 public class controlPersonalizar {
     private viewPersonalizar vista;
     private modelPersonalizar modelo;
-    private controlResumen controlResumen;
-    private viewHome vista_g;
 
     
     public controlPersonalizar(viewHome vista_g, modelPersonalizar modelo, controlResumen controlResumen)
     {
-        this.vista_g = vista_g;
         this.modelo = modelo;
-        this.controlResumen = controlResumen;
         this.vista = vista_g.getViewPersonalizar();
         
         

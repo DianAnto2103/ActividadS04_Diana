@@ -14,7 +14,6 @@ import Model.modelResumen;
 public class controlResumen {
     private modelResumen modelo;
     private viewResumen vista;
-    private viewHome vista_g;
 
     public controlResumen(viewHome vista_g, modelResumen modelo) {
         this.modelo = modelo;

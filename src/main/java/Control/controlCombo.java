@@ -9,8 +9,6 @@ package Control;
  * @author diana
  */
 
-import Factory.Combo;
-import Factory.Factory.ComboFactory;
 import Model.modelCombo;
 import View.viewCombo;
 import View.viewHome;
